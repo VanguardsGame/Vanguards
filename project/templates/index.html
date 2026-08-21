@@ -1,1 +1,29 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rowdies:wght@300;400;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+
+    <title>Vanguards</title>
+    <link rel='icon' href="{{ url_for('static', filename='icon.png') }}?v=2">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}?v={{ css_version }}">
+</head>
+
+<body>
+<div id="body">
+    <img src="{{ url_for('static', filename='vanguards.png') }}" alt="Vanguards text" id="vanguards">
+    <p id="countdown"><span class="number">3</span>M 10d 5h 34m 30s</p>
+    <div class="socials"><a href="https://discord.gg/vang"><img src="{{ url_for('static', filename='discord.svg') }}">discord.gg/vang</a></div>
+</div>
+</body>
+
+<script src="{{ url_for('static', filename='scripts/global.js') }}"></script>
+</html>
