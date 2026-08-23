@@ -15,11 +15,16 @@ function updateCountdown(){
     let minutes = Math.floor(timeDiff / (1000 * 60)) % 60
     let seconds = Math.floor(timeDiff / 1000) % 60
 
-    countdown.innerHTML = `<span class="number">${months}</span>M
-<span class="number">${days}</span>d
-                            <span class="number">${hours}</span>h 
-                            <span class="number">${minutes}</span>m 
-                            <span class="number">${seconds}</span>s`
+    countdown.innerHTML = `
+<div class="countdown-number"><span class="number">${months}</span>Months</div>
+<div class="divider"></div>
+<div class="countdown-number"><span class="number">${days}</span>Days</div>
+<div class="divider"></div>
+<div class="countdown-number"><span class="number">${hours}</span>Hours</div>
+<div class="divider"></div>
+<div class="countdown-number"><span class="number">${minutes}</span>Minutes</div>
+<div class="divider"></div>
+<div class="countdown-number"><span class="number">${seconds}</span>Seconds</div>`
 }
 
 updateCountdown()
