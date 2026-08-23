@@ -21,7 +21,16 @@
 <div id="body">
     <img src="{{ url_for('static', filename='vanguards.png') }}" alt="Vanguards text" id="vanguards">
     <p id="countdown"><span class="number">3</span>M 10d 5h 34m 30s</p>
-    <div class="socials"><a href="https://discord.gg/vang"><img src="{{ url_for('static', filename='discord.svg') }}">discord.gg/vang</a></div>
+
+    <div class="socials-outer">
+        <div class="socials">
+            <a href="https://discord.gg/vang">
+                <img src="{{ url_for('static', filename='discord.svg') }}">
+                Join our discord!
+            </a>
+        </div>
+    </div>
+
 </div>
 </body>
 
