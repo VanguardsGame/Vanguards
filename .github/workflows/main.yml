@@ -20,6 +20,6 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            cd /path/to/your/repo
+            cd /home/admin/sites/vanguards
             git pull
             docker compose up -d --build
