@@ -16,7 +16,7 @@ jobs:
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: your-server-tailscale-name   # MagicDNS name, or the 100.x tailscale IP
+          host: 100.82.78.2
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
