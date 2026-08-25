@@ -23,3 +23,13 @@ jobs:
             cd /home/admin/sites/vanguards
             git pull
             docker compose up -d --build
+      
+      - name: Notify success
+        if: success()
+        run: |
+          curl -X POST ${{ secrets.WEBHOOK_URL }} -H "Content-Type: application/json" -d '{"content":"Deployment successful."}'
+
+      - name: Notify failure
+        if: failure()
+        run: |
+          curl -X POST ${{ secrets.WEBHOOK_URL }} -H "Content-Type: application/json" -d '{"content":"Deployment unsuccessful."}'
