@@ -4,7 +4,8 @@ main = Blueprint('main', __name__)
 
 @main.route('/')
 def index():
-    with open('project/static/visits.txt', 'r') as f:
+    with open('project/static/visits.txt', 'a+') as f:
+        f.seek(0)
         visits = f.read()
         if visits:
             visits = int(visits)
