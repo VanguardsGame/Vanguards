@@ -43,7 +43,7 @@ def create_app():
     def after_request(response):
         if getattr(g, 'new_visitor', None):
             increment_visits()
-            response.set_cookie('site_visited', "1", max_age= 60 * 60 * 12, httponly=True, samesite="Lax")
+            response.set_cookie('site_visited', "1", max_age= 60 * 60 * 24, httponly=True, samesite="Lax")
 
         return response
 
